@@ -17,6 +17,7 @@ body {
     gap: 30px;
     width: max-content;
     animation: drift 25s linear infinite;
+    height: 250px;
 }
 .images:hover {
     animation-play-state: paused;
@@ -29,4 +30,15 @@ body {
 }
 .images:hover img {
     transform: scale(0.9);
+    opacity: 0.6;
+}
+.images img:hover {
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(100, 178, 247, 0.4);
+}
+.images img.neighbor {
+    transform: scale(1.05);
+    opacity: 0.85;
 }
