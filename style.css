@@ -4,7 +4,23 @@ body {
 .title {
     font-size: 60px;
     color: rgb(100, 178, 247);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.gallery {
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0;
+}
+.images {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: drift 25s linear infinite;
+}
+.images:hover {
+    animation-play-state: paused;
 }
 .images img {
-    border-radius: 20%;
+   border-radius: 12px;
 }
