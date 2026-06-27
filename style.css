@@ -1,0 +1,19 @@
+body {
+    background-color: #020208;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+.title {
+    flex: 0 0 35%;
+    height: 100vh;
+    margin: 0;
+    padding: 60px;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+}
