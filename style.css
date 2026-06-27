@@ -1,5 +1,7 @@
 body {
     background-color: #000826;
+    margin: 0;
+    overflow-x: hidden;
 }
 .title {
     font-size: 60px;
@@ -41,4 +43,12 @@ body {
 .images img.neighbor {
     transform: scale(1.05);
     opacity: 0.85;
+}
+@keyframes drift {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
