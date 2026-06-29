@@ -15,5 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
             navMenu.classList.toggle("active");
         })
     }
-    
+
+    function animateBorder(element, duration) {
+        cancelAnimationFrame(animationId);
+        const rect = element.querySelector(".border-rect")
+        if (!rect) return;
+        let startTime = null;
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+        }
+    }
 });
