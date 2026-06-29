@@ -166,3 +166,23 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0);
 }
+.nav-menu.active {
+    max-height: 200px;
+    opacity: 1;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+    opacity: 0;
+}
+.nav-menu.active a {
+    transform: translateX(0);
+    opacity: 1;
+}
