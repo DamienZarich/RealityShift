@@ -9,5 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const CYCLE_DURATION = 10000;
 
     const hamburger = document.getElementById("hamburger");
-    const 
+    const navMenu = document.getElementById("nav-menu");
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        })
+    }
+    
 });
