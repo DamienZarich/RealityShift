@@ -32,6 +32,7 @@ body {
     position: relative;
     background-color: #000;
     overflow: hidden;
+    z-index: 100;
 }
 .showcase video {
     width: 100%;
@@ -185,4 +186,22 @@ body {
 .nav-menu.active a {
     transform: translateX(0);
     opacity: 1;
+}
+#main-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.showcase-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
