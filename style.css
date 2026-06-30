@@ -1,4 +1,4 @@
-body {
+.home-Page {
     background-color: #020208;
     margin: 0;
     padding: 0;
@@ -205,14 +205,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.about-content {
-    display: flex;
-    justify-content: center;
-}
 .top-bar {
     background:linear-gradient(rgb(33, 33, 33),slategray);
     height: 250px;
-    width: 100vw;
+    width: 100%;
+    align-items: center;
     justify-content: center;
     display: flex;
+}
+.about-page {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    background-color: #020208;
 }
