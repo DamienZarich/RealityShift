@@ -66,4 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (rect) rect.style.strokeDashoffset = 0;
     }
 }
+    function handleNext() {
+        currentIndex = (currentIndex + 1) % thumbs.length;
+        changeMedia(currentIndex);
+    }
+
+    thumbs.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => changeMedia(index));
+    });
+
+    if (showcase) {
+        showcase.addEventListener("mouseenter", () => cancelAnimationFrame(animationId));
+        showcase.addEventListener("mouseleave", () => animateBorder(thumbs[currentIndex], CYCLE_DURATION));
+    }
+
+    changeMedia(0);
 });
