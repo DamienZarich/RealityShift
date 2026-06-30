@@ -205,3 +205,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+.top-bar {
+    background:linear-gradient(rgb(33, 33, 33),slategray);
+    height: 250px;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+}

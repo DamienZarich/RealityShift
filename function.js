@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const photoTitle = document.getElementById("photo-title")
     const thumbs = document.querySelectorAll(".thumb-item")
     const showcase = document.getElementById("showcase-box")
+    const home = document.getElementById("Home");
+    const about = document.getElementById("About");
+    const contact = document.getElementById("Reach Out");
 
     let currentIndex = 0;
     let animationId = null;
