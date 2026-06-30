@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mainDisplay = document.getElementById("main-video");
     const photoTitle = document.getElementById("photo-title")
-    const thumbs = document.querySelectorAll(".thumb-items")
+    const thumbs = document.querySelectorAll(".thumb-item")
     const showcase = document.getElementById("showcase-box")
 
     let currentIndex = 0;
@@ -33,17 +33,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         animationId = requestAnimationFrame(step);
     }
-    function changeMedia(index) {
-        currentIndex = index;
-        const activeThumb = thumbs[currentIndex];
+   function changeMedia(index) {
+    currentIndex = index;
+    const activeThumb = thumbs[currentIndex];
 
-        if (photoTitle) {
-            photoTitle.textContent = activeThumb.getAttribute("data-name");
-        }
-        if (mainDisplay) {
-            const newImg = activeThumb.getAttribute("data-img");
 
-            if (mainDisplay.tagName) {}
+    if (photoTitle) photoTitle.textContent = activeThumb.getAttribute("data-name");
+    
+    if (mainDisplay) {
+        const newImg = activeThumb.getAttribute("data-img");
+        if (mainDisplay.tagName === "IMG") {
+            mainDisplay.setAttribute("src", newImg);
+        } else {
+            mainDisplay.style.backgroundImage = `url('${newImg}')`;
         }
     }
+
+
+    thumbs.forEach(t => {
+        t.classList.remove("active");
+        const rect = t.querySelector(".border-rect");
+        if (rect) rect.style.strokeDashoffset = 261;
+    });
+
+    activeThumb.classList.add("active");
+
+    const isHovering = showcase.matches(':hover');
+    if (!isHovering) {
+        animateBorder(activeThumb, CYCLE_DURATION);
+    } else {
+        const rect = activeThumb.querySelector(".border-rect");
+        if (rect) rect.style.strokeDashoffset = 0;
+    }
+}
 });
